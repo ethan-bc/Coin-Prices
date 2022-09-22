@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(results, id: \.id) { item in
-                NavigationLink(destination: CoinView()) {
+                NavigationLink(destination: CoinView(id: item.id)) {
                     HStack {
                         AsyncImage(url: URL(string: item.image)) { image in
                             image.resizable()

@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CoinView: View {
+    let id: String
+    init (id: String){
+        self.id = id
+    }
     @State var results = CoinDetails()
 
     var body: some View {
@@ -49,7 +53,7 @@ struct CoinView: View {
     }
     
     func loadData() {
-        guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=true") else {
+        guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/\(id)?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=true") else {
             fatalError("Missing URL")
         }
         let request = URLRequest(url: url)
@@ -69,6 +73,6 @@ struct CoinView: View {
 
 struct CoinView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinView()
+        CoinView(id: "btc")
     }
 }

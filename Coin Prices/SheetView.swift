@@ -28,7 +28,7 @@ struct SheetView: View {
                     .background(Color(.systemGray6))
                     .cornerRadius(16)
                     VStack(spacing: 16) {
-                        AsyncImage(url: URL(string: "https://pbs.twimg.com/profile_images/1541970127981203456/vlhm3pgf_400x400.png")) { image in
+                        AsyncImage(url: URL(string: "https://www.gravatar.com/avatar/1bb0dcbe33e300688fcd9e73d987ebcd")) { image in
                             image.resizable().clipShape(Circle())
                         } placeholder: {
                             ProgressView()
