@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		80162DF0288B39A1007FEF9F /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80162DEF288B39A1007FEF9F /* SheetView.swift */; };
-		80162DF2288B3BB9007FEF9F /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80162DF1288B3BB9007FEF9F /* CoinView.swift */; };
-		80162DF8288B42F8007FEF9F /* CoinDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80162DF7288B42F8007FEF9F /* CoinDetailsData.swift */; };
 		80CCB2AE2889F3CC00D445AD /* Coin_PricesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CCB2AD2889F3CC00D445AD /* Coin_PricesApp.swift */; };
 		80CCB2B22889F3CD00D445AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80CCB2B12889F3CD00D445AD /* Assets.xcassets */; };
 		80CCB2B52889F3CD00D445AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80CCB2B42889F3CD00D445AD /* Preview Assets.xcassets */; };
@@ -39,8 +37,6 @@
 
 /* Begin PBXFileReference section */
 		80162DEF288B39A1007FEF9F /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
-		80162DF1288B3BB9007FEF9F /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
-		80162DF7288B42F8007FEF9F /* CoinDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsData.swift; sourceTree = "<group>"; };
 		80CCB2AA2889F3CB00D445AD /* Coin Prices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coin Prices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80CCB2AD2889F3CC00D445AD /* Coin_PricesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin_PricesApp.swift; sourceTree = "<group>"; };
 		80CCB2B12889F3CD00D445AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,9 +100,7 @@
 			children = (
 				80CCB2AD2889F3CC00D445AD /* Coin_PricesApp.swift */,
 				80CCB2D72889F43A00D445AD /* Data.swift */,
-				80162DF7288B42F8007FEF9F /* CoinDetailsData.swift */,
 				80CCB2DB288A17DA00D445AD /* ContentView.swift */,
-				80162DF1288B3BB9007FEF9F /* CoinView.swift */,
 				80162DEF288B39A1007FEF9F /* SheetView.swift */,
 				80CCB2B12889F3CD00D445AD /* Assets.xcassets */,
 				80CCB2B32889F3CD00D445AD /* Preview Content */,
@@ -269,12 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80162DF2288B3BB9007FEF9F /* CoinView.swift in Sources */,
 				80CCB2D82889F43A00D445AD /* Data.swift in Sources */,
 				80CCB2DC288A17DA00D445AD /* ContentView.swift in Sources */,
 				80162DF0288B39A1007FEF9F /* SheetView.swift in Sources */,
 				80CCB2AE2889F3CC00D445AD /* Coin_PricesApp.swift in Sources */,
-				80162DF8288B42F8007FEF9F /* CoinDetailsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +432,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +461,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

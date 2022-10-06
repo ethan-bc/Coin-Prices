@@ -7,7 +7,15 @@
 
 import Foundation
 
-struct WelcomeElement: Codable {
+struct Coins: Codable, Identifiable, Equatable, Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: Coins, rhs: Coins) -> Bool {
+        return lhs.id == rhs.id && lhs.id == rhs.id
+    }
+    
     let id, symbol, name: String
     let image: String
     let currentPrice: Double
@@ -22,6 +30,7 @@ struct WelcomeElement: Codable {
     let atlDate: String
     let roi: Roi?
     let lastUpdated: String
+    var sparklineIn7D: [SparklineIn7D]
 
     enum CodingKeys: String, CodingKey {
         case id, symbol, name, image
@@ -47,6 +56,7 @@ struct WelcomeElement: Codable {
         case atlDate = "atl_date"
         case roi
         case lastUpdated = "last_updated"
+        case sparklineIn7D = "sparkline_in_7d"
     }
 }
 
@@ -63,5 +73,20 @@ enum Currency: String, Codable {
     case usd = "usd"
 }
 
-typealias TaskEntry = [WelcomeElement]
+class SparklineIn7D: Codable, Hashable, Equatable {
+    let price: [Double]
 
+    init(price: [Double]) {
+        self.price = price
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(price)
+    }
+    
+    static func == (lhs: SparklineIn7D, rhs: SparklineIn7D) -> Bool {
+        return lhs.price == rhs.price && lhs.price == rhs.price
+    }
+}
+
+typealias TaskEntry = [Coins]
